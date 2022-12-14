@@ -27,16 +27,21 @@ const listCharacters = (data) => {
 };
 const quotes = (data) => {
   let quote = [...data.quotes];
-  let lenght=quote.length;
-  const div = document.querySelector("#quote");
+  let lenght = quote.length;
+  const figure = document.querySelector("#quote");
   const blockquote = document.createElement("blockquote");
   blockquote.className = "blockquote";
   for (i = 0; i < lenght; i++) {
-  const p = document.createElement("p");
-  p.innerHTML=quote[i]
-  blockquote.appendChild(p);
+    const p = document.createElement("p");
+    const q = document.createElement("q");
+    q.innerHTML = quote[i];
+    const figcaption = document.createElement("figcaption");
+    figcaption.innerHTML = data.name;
+    figcaption.className = "blockquote-footer";
+    p.appendChild(q);
+    blockquote.appendChild(p);
+    p.appendChild(figcaption);
+    figure.appendChild(blockquote);
   }
-  
-  div.appendChild(blockquote);
 };
 load();

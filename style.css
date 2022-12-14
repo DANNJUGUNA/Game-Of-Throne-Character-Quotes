@@ -34,7 +34,7 @@
   border-color: black;
   border-top: 0px;
   border-style: solid;
-  width: 300px;
+  width: 280px;
 }
 #characters h2 {
   text-align: center;
@@ -54,4 +54,23 @@
 #characters ul li:active {
   color: rgb(202, 17, 17);
   font-size: 30px;
+}
+#qoutes blockquote p {
+  font-size: 25px;
+  padding: 6px;
+  margin-left: 3px;
+  background-color: rgb(101, 113, 10);
+  color: #fff;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: blue;
+  border-start-start-radius: -4px;
+  border-bottom-right-radius: -10px;
+  border-top-right-radius: 30px;
+}
+ #qoutes blockquote p figcaption{
+    color:black;
+    margin-top: 3px;
+    text-align: center;
+    font-style: italic;
 }
