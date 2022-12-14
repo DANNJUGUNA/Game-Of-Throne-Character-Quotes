@@ -21,6 +21,22 @@ const listCharacters = (data) => {
   li.style.cursor = "pointer";
   ul.appendChild(li);
   div.appendChild(ul);
-  li.addEventListener("click", () => {});
+  li.addEventListener("click", () => {
+    quotes(data);
+  });
+};
+const quotes = (data) => {
+  let quote = [...data.quotes];
+  let lenght=quote.length;
+  const div = document.querySelector("#quote");
+  const blockquote = document.createElement("blockquote");
+  blockquote.className = "blockquote";
+  for (i = 0; i < lenght; i++) {
+  const p = document.createElement("p");
+  p.innerHTML=quote[i]
+  blockquote.appendChild(p);
+  }
+  
+  div.appendChild(blockquote);
 };
 load();
