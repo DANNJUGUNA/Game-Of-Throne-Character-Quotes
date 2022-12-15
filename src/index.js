@@ -25,6 +25,7 @@ const listCharacters = (data) => {
     quotes(data);
   });
 };
+
 const quotes = (data) => {
   let quote = [...data.quotes];
   let lenght = quote.length;
@@ -38,6 +39,39 @@ const quotes = (data) => {
     const figcaption = document.createElement("figcaption");
     figcaption.innerHTML = data.name;
     figcaption.className = "blockquote-footer";
+   
+    let likes=0;
+    let dislike=0;
+    //creating button like
+    let btnlike = document.createElement("button");
+    btnlike.className = "like_btn";
+    let span = document.createElement("span");
+    span.id = "icon";
+    let sp = document.createElement("i");
+    sp.className = "far fa-thumbs-up";
+    let span1 = document.createElement("span");
+    span1.id="count"
+    span1.innerHTML=`${likes} likes`
+    span.appendChild(sp);
+    span.appendChild(span1);
+ 
+    btnlike.appendChild(span);
+    p.appendChild(btnlike);
+   
+    //create button dislike
+    let btndislike = document.createElement("button");
+    btndislike.className = "like_btn";
+    let span0 = document.createElement("span");
+    span0.id = "icon";
+    let sp2 = document.createElement("i");
+    sp2.className = "far fa-thumbs-down";
+    span0.appendChild(sp2);
+    btndislike.appendChild(span0)
+    let span2 = document.createElement("span");
+    span2.id="count"
+    span2.innerHTML=`${dislike} dislikes`
+    btndislike.appendChild(span2)
+    p.appendChild(btndislike);
     p.appendChild(q);
     blockquote.appendChild(p);
     p.appendChild(figcaption);
