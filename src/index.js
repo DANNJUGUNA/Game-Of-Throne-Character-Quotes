@@ -72,7 +72,11 @@ const quotes = (data) => {
     btndislike.appendChild(span0)
     let span2 = document.createElement("span");
     span2.id="count"
-    span2.innerHTML=`${dislike} dislikes`
+    span2.innerHTML=`${dislike} dislikes`;
+    btndislike.addEventListener('click',()=>{ 
+      let like=dislike++;
+       span2.innerHTML=`${like} dislikes`;
+    })
     btndislike.appendChild(span2)
     p.appendChild(btndislike);
     p.appendChild(q);
