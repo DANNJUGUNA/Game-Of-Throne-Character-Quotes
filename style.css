@@ -3,7 +3,7 @@
 }
 #header {
   display: flex;
-  background-color: azure;
+  background-color: #fff;
   border-bottom: 5px;
   border-top: 0px;
   border-left: 0px;
@@ -14,8 +14,8 @@
 #header img {
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 60px;
-  height: 110px;
+  margin-left: 160px;
+  height: 150px;
 }
 #header h1 {
   margin-left: 10px;
@@ -55,22 +55,54 @@
   color: rgb(202, 17, 17);
   font-size: 30px;
 }
-#qoutes blockquote p {
-  font-size: 25px;
-  padding: 6px;
-  margin-left: 3px;
-  background-color: rgb(101, 113, 10);
-  color: #fff;
-  border-radius: 20px;
-  border-style: solid;
-  border-color: blue;
-  border-start-start-radius: -4px;
-  border-bottom-right-radius: -10px;
-  border-top-right-radius: 30px;
+#qoutes {
+  margin-top: 4px;
+  text-align: center;
 }
- #qoutes blockquote p figcaption{
-    color:black;
-    margin-top: 3px;
-    text-align: center;
-    font-style: italic;
+#qoutes blockquote p {
+  font-size: 36px;
+  text-align: center;
+  padding: 6px;
+  margin-left: 25px;
+  background-color: #3c83da;
+  color: #fff;
+  border-radius: 60px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-bottom: 0px;
+  border-bottom-right-radius: 60px;
+  width: 90%;
+}
+#qoutes blockquote p figcaption {
+  color: black;
+  font-size: 33px;
+  margin-top: 3px;
+  text-align: center;
+  font-style: italic;
+}
+.like_btn {
+  margin-left: 20px;
+  padding: 10px 15px;
+  background: #145392;
+  font-size: 28px;
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  border-radius: 30px;
+  color: #ffff;
+  border-color: black;
+  border-style: double;
+  border-width: 3px;
+  cursor: pointer;
+}
+.like_btn:hover {
+  box-shadow: 0 5px rgb(0, 89, 0);
+  color: black;
+  background-color: #fff;
+  font-size: 28px;
+}
+.like_btn:active {
+  transform: translateY(6px);
+  box-shadow: 0 7px rgb(0, 0, 0);
+  color: red;
+  border-color: red;
+  background: #fff;
 }
