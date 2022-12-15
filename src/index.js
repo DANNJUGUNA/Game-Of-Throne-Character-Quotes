@@ -22,12 +22,15 @@ const listCharacters = (data) => {
   ul.appendChild(li);
   div.appendChild(ul);
   li.addEventListener("click", () => {
-    //clear();
+    clear();
     quotes(data);
   });
 };
 //clearing the qoutes after another character is clicked
-
+const clear=()=>{
+  const figure = document.querySelector("#quote");
+  figure.innerHTML='';
+}
 //fetching quotes from the API
 const quotes = (data) => {
   let quote = [...data.quotes];
