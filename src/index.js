@@ -54,7 +54,10 @@ const quotes = (data) => {
     span1.innerHTML=`${likes} likes`
     span.appendChild(sp);
     span.appendChild(span1);
- 
+    btnlike.addEventListener('click',()=>{ 
+       let like=likes++;
+        span1.innerHTML=`${like} likes`;
+     })
     btnlike.appendChild(span);
     p.appendChild(btnlike);
    
