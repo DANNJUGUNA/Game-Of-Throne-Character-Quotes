@@ -22,10 +22,13 @@ const listCharacters = (data) => {
   ul.appendChild(li);
   div.appendChild(ul);
   li.addEventListener("click", () => {
+    //clear();
     quotes(data);
   });
 };
+//clearing the qoutes after another character is clicked
 
+//fetching quotes from the API
 const quotes = (data) => {
   let quote = [...data.quotes];
   let lenght = quote.length;
@@ -51,15 +54,16 @@ const quotes = (data) => {
     sp.className = "far fa-thumbs-up";
     let span1 = document.createElement("span");
     span1.id="count"
-    span1.innerHTML=`${likes} likes`
+    span1.innerHTML=`${likes} Likes`
     span.appendChild(sp);
     span.appendChild(span1);
+    // button lick functionality
     btnlike.addEventListener('click',()=>{ 
        let like=likes++;
-        span1.innerHTML=`${like} likes`;
+        span1.innerHTML=`${like} Likes`;
      })
     btnlike.appendChild(span);
-    p.appendChild(btnlike);
+    figcaption.appendChild(btnlike);
    
     //create button dislike
     let btndislike = document.createElement("button");
@@ -72,13 +76,14 @@ const quotes = (data) => {
     btndislike.appendChild(span0)
     let span2 = document.createElement("span");
     span2.id="count"
-    span2.innerHTML=`${dislike} dislikes`;
+    span2.innerHTML=`${dislike} Dislikes`;
+    //button dislike functionality
     btndislike.addEventListener('click',()=>{ 
       let like=dislike++;
-       span2.innerHTML=`${like} dislikes`;
+       span2.innerHTML=`${like} Dislikes`;
     })
     btndislike.appendChild(span2)
-    p.appendChild(btndislike);
+    figcaption.appendChild(btndislike);
     p.appendChild(q);
     blockquote.appendChild(p);
     p.appendChild(figcaption);
