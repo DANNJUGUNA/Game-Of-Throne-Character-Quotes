@@ -27,10 +27,10 @@ const listCharacters = (data) => {
   });
 };
 //clearing the qoutes after another character is clicked
-const clear=()=>{
+const clear = () => {
   const figure = document.querySelector("#quote");
-  figure.innerHTML='';
-}
+  figure.innerHTML = "";
+};
 //fetching quotes from the API
 const quotes = (data) => {
   let quote = [...data.quotes];
@@ -45,9 +45,9 @@ const quotes = (data) => {
     const figcaption = document.createElement("figcaption");
     figcaption.innerHTML = data.name;
     figcaption.className = "blockquote-footer";
-   
-    let likes=0;
-    let dislike=0;
+
+    let likes = 0;
+    let dislike = 0;
     //creating button like
     let btnlike = document.createElement("button");
     btnlike.className = "like_btn";
@@ -56,18 +56,18 @@ const quotes = (data) => {
     let sp = document.createElement("i");
     sp.className = "far fa-thumbs-up";
     let span1 = document.createElement("span");
-    span1.id="count"
-    span1.innerHTML=`${likes} Likes`
+    span1.id = "count";
+    span1.innerHTML = `${likes} Likes`;
     span.appendChild(sp);
     span.appendChild(span1);
     // button lick functionality
-    btnlike.addEventListener('click',()=>{ 
-       let like=likes++;
-        span1.innerHTML=`${like} Likes`;
-     })
+    btnlike.addEventListener("click", () => {
+      let like = likes++;
+      span1.innerHTML = `${like} Likes`;
+    });
     btnlike.appendChild(span);
     figcaption.appendChild(btnlike);
-   
+
     //create button dislike
     let btndislike = document.createElement("button");
     btndislike.className = "like_btn";
@@ -76,16 +76,16 @@ const quotes = (data) => {
     let sp2 = document.createElement("i");
     sp2.className = "far fa-thumbs-down";
     span0.appendChild(sp2);
-    btndislike.appendChild(span0)
+    btndislike.appendChild(span0);
     let span2 = document.createElement("span");
-    span2.id="count"
-    span2.innerHTML=`${dislike} Dislikes`;
+    span2.id = "count";
+    span2.innerHTML = `${dislike} Dislikes`;
     //button dislike functionality
-    btndislike.addEventListener('click',()=>{ 
-      let like=dislike++;
-       span2.innerHTML=`${like} Dislikes`;
-    })
-    btndislike.appendChild(span2)
+    btndislike.addEventListener("click", () => {
+      let like = dislike++;
+      span2.innerHTML = `${like} Dislikes`;
+    });
+    btndislike.appendChild(span2);
     figcaption.appendChild(btndislike);
     p.appendChild(q);
     blockquote.appendChild(p);
